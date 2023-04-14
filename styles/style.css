@@ -13,14 +13,20 @@
   
 }
 
-/*Logo color: #8DACDA (Blue)*/
+/*Logo color: #8DACDA (Blue)
+Cute pink color: #F487B6
+Rich back: #011627 (Black background?)*/
 
 :root {
     --cor-principal: #8DACDA; /*Cor usada no título da página*/
-    --cor-textos-padrao: black; /*Cor usada nos textos*/
+    --cor-textos-padrao: #090909; /*Cor usada nos textos*/
 
     --fonte-titulo: 'Mouse Memoirs', sans-serif;
     --fonte-subtitulo: 'Oswald', sans-serif;
+}
+
+body {
+    background-color: #FDF4F5;
 }
 
 .header__conteudo {
@@ -34,8 +40,9 @@
 
 .header__titulo {
     font-family: var(--fonte-titulo);
-    text-align: center;
     font-size: 120px;
+    color: var(--cor-textos-padrao);
+    text-align: center;
     text-transform: uppercase;
     letter-spacing: 5px;
     padding: 7px 0;
