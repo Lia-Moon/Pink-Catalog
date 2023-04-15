@@ -20,6 +20,7 @@ Rich back: #011627 (Black background?)*/
 :root {
     --cor-principal: #8DACDA; /*Cor usada no título da página*/
     --cor-textos-padrao: #090909; /*Cor usada nos textos*/
+    --cor-link-dark-background: #FDF4F5; /*Cor também usada no background*/
 
     --fonte-titulo: 'Mouse Memoirs', sans-serif;
     --fonte-subtitulo: 'Oswald', sans-serif;
@@ -29,13 +30,39 @@ body {
     background-color: #FDF4F5;
 }
 
+.navegacao {
+    text-align: left;
+    text-decoration: none;
+    padding: 10px 0 10px 20px;
+    margin-bottom: 20px;
+    background-color: var(--cor-principal);
+}
+
+.navegacao a {
+    font-family: var(--fonte-subtitulo);
+    font-size: 25px;
+    color: var(--cor-link-dark-background);
+}
+
+.navegacao a:visited {
+    color: var(--cor-link-dark-background);
+}
+
+.navegacao a:hover {
+    color: var(--cor-textos-padrao);
+}
+
 .header__conteudo {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /*1fr = 1 fraction of the space*/
+    grid-template-rows: 1fr;
+    justify-content: center;
+    margin: auto;
+    width: 60%;
 }
 
 .header__titulo--e--subtitulo {
-    margin: 0 auto;
+    margin: 25% auto;
 }
 
 .header__titulo {
@@ -68,6 +95,7 @@ body {
     background-size: 200%;
     transition: all 0.5s;
     cursor: default;
+    margin: 13px 0;
 }
 
 .header__subtitulo:hover {
@@ -76,13 +104,36 @@ body {
 }
 
 .header__imagem {
-    width: 300px;
+    width: 400px;
 }
 
 .navegacao a {
     text-decoration: none;
 }
 
+.copyright {
+    font-family: var(--fonte-subtitulo);
+    font-size: 14px;
+    color: var(--cor-textos-padrao);
+    line-height: 1.5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /*1fr = 1 fraction of the space*/
+    grid-template-rows: 1fr;
+    justify-content: center;
+    margin: auto;
+    width: 80%;
+    padding: 10px 0;
+}
+
 .copyright a {
+    color: var(--cor-textos-padrao);
     text-decoration: none;
+}
+
+.copyright a:visited {
+    color: var(--cor-textos-padrao);
+}
+
+.copyright__autoria__ilustracoes {
+    text-align: right;
 }

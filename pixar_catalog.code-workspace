@@ -7,5 +7,7 @@
 			"path": "../Página_portfólio"
 		}
 	],
-	"settings": {}
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Pixar_Catalog"
+	}
 }
