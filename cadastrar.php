@@ -1,16 +1,16 @@
 <?php include "cabecalho.php" ?>
 
-<body>
+<body id="cadastrar">
     <header> <!-- *********************************************** HEADER ***************************************************** -->
         <nav class="navegacao">
             <div class="navegacao__esquerda">
-                <a href="galeria.php">Início</a>
-                <a href="#">Assistidos</a>
-                <a href="#">Favoritos</a>
+                <a class="navegacao__esquerda--inicio" href="galeria.php">Início</a>
+                <a class="navegacao__esquerda--assistidos" href="#">Assistidos</a>
+                <a class="navegacao__esquerda--favoritos" href="#">Favoritos</a>
             </div>
             <div class="navegacao__direita">
-                <a href="galeria.php">Galeria</a>
-                <a href="cadastrar.php">Cadastrar</a>
+                <a class="navegacao__direita--galeria" href="galeria.php">Galeria</a>
+                <a class="navegacao__direita--cadastrar" href="cadastrar.php">Cadastrar</a>
             </div>
         </nav>
 

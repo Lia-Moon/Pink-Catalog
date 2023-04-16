@@ -49,12 +49,13 @@ body {
 }
 
 .navegacao a {
-    
     font-family: var(--fonte-subtitulo);
     font-size: 25px;
     color: var(--cor-link-dark-background);
-    padding: 0 2rem 0 0;
     text-decoration: none;
+    margin-right: 2rem;
+
+    text-shadow: 2px 2px 3px var(--cor-textos-padrao);
 }
 
 .navegacao a:visited {
@@ -63,6 +64,11 @@ body {
 
 .navegacao a:hover {
     color: var(--cor-textos-padrao);
+    text-shadow: 2px 2px 3px var(--cor-link-dark-background);
+}
+
+.navegacao ul li.active {
+    background: grey;
 }
 
 .header__conteudo {
@@ -123,9 +129,13 @@ body {
     margin-top: 30px;
 }
 
+.card-title {
+    font-family: var(--fonte-subtitulo);
+    font-weight: bold;
+}
+
 .material-icons {
-    color: #FFBF00;
-    vertical-align: middle;
+    color: var(--cor-textos-padrao);
 }
 
 .copyright {
@@ -153,4 +163,8 @@ body {
 
 .copyright__autoria__ilustracoes {
     text-align: right;
+}
+
+#galeria .navegacao .navegacao__direita--galeria, #cadastrar .navegacao .navegacao__direita--cadastrar {
+    border-bottom: solid 2px var(--cor-link-dark-background);
 }
