@@ -9,7 +9,7 @@
                 <a class="navegacao__esquerda--favoritos" href="#">Favoritos</a>
             </div>
             <div class="navegacao__direita">
-                <a class="navegacao__direita--index" href="index.php">index</a>
+                <a class="navegacao__direita--index" href="index.php">Catálogo</a>
                 <a class="navegacao__direita--cadastrar" href="cadastrar.php">Cadastrar</a>
             </div>
         </nav>

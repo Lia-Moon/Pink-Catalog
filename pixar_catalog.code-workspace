@@ -5,9 +5,13 @@
     },
     {
       "path": "../Página_portfólio"
+    },
+    {
+      "path": "../teste"
     }
   ],
   "settings": {
-    "liveServer.settings.multiRootWorkspaceName": "Pixar_Catalog"
+    "liveServer.settings.multiRootWorkspaceName": "Pixar_Catalog",
+    "editor.wordWrap": "on"
   }
 }
