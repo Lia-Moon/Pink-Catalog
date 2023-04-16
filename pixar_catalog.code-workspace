@@ -1,13 +1,13 @@
 {
-	"folders": [
-		{
-			"path": "."
-		},
-		{
-			"path": "../Página_portfólio"
-		}
-	],
-	"settings": {
-		"liveServer.settings.multiRootWorkspaceName": "Pixar_Catalog"
-	}
+  "folders": [
+    {
+      "path": "."
+    },
+    {
+      "path": "../Página_portfólio"
+    }
+  ],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "Pixar_Catalog"
+  }
 }

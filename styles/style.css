@@ -15,7 +15,9 @@
 
 /*Logo color: #8DACDA (Blue)
 Cute pink color: #F487B6
-Rich back: #011627 (Black background?)*/
+Rich back: #011627 (Black background?)
+
+#82b1ff blue accent-1 (Cor usada nos botões)*/
 
 :root {
     --cor-principal: #8DACDA; /*Cor usada no título da página*/
@@ -31,17 +33,28 @@ body {
 }
 
 .navegacao {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0.1rem 0 3rem 20px;
+    margin-bottom: 10px;
+    background-color: var(--cor-principal);    
+}
+
+.navegacao__esquerda {
     text-align: left;
-    text-decoration: none;
-    padding: 10px 0 10px 20px;
-    margin-bottom: 20px;
-    background-color: var(--cor-principal);
+}
+
+.navegacao__direita {
+    text-align: right;
 }
 
 .navegacao a {
+    
     font-family: var(--fonte-subtitulo);
     font-size: 25px;
     color: var(--cor-link-dark-background);
+    padding: 0 2rem 0 0;
+    text-decoration: none;
 }
 
 .navegacao a:visited {
@@ -57,12 +70,12 @@ body {
     grid-template-columns: 1fr 1fr; /*1fr = 1 fraction of the space*/
     grid-template-rows: 1fr;
     justify-content: center;
-    margin: auto;
+    margin: 20px auto;
     width: 60%;
 }
 
 .header__titulo--e--subtitulo {
-    margin: 25% auto;
+    margin: auto;
 }
 
 .header__titulo {
@@ -72,7 +85,6 @@ body {
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 5px;
-    padding: 7px 0;
     transition: 2s;
 }
 
@@ -95,7 +107,6 @@ body {
     background-size: 200%;
     transition: all 0.5s;
     cursor: default;
-    margin: 13px 0;
 }
 
 .header__subtitulo:hover {
@@ -107,8 +118,14 @@ body {
     width: 400px;
 }
 
-.navegacao a {
-    text-decoration: none;
+.row {
+    width: 80%;
+    margin-top: 30px;
+}
+
+.material-icons {
+    color: #FFBF00;
+    vertical-align: middle;
 }
 
 .copyright {
@@ -121,7 +138,7 @@ body {
     grid-template-rows: 1fr;
     justify-content: center;
     margin: auto;
-    width: 80%;
+    width: 95%;
     padding: 10px 0;
 }
 
