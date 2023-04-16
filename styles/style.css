@@ -165,6 +165,6 @@ body {
     text-align: right;
 }
 
-#galeria .navegacao .navegacao__direita--galeria, #cadastrar .navegacao .navegacao__direita--cadastrar {
+#index .navegacao .navegacao__direita--index, #cadastrar .navegacao .navegacao__direita--cadastrar {
     border-bottom: solid 2px var(--cor-link-dark-background);
 }
