@@ -18,7 +18,7 @@
     <main> <!-- *********************************************** MAIN ***************************************************** -->
         <div id="formulario__cadastro" class="row">
 
-            <form action="inserirFilme.php" method="POST" id="formulario">
+            <form action="inserirFilme.php" method="POST" id="formulario" name="formulariocadastro">
                 <div class="col s6 offset-s3">
                     <div class="card">
                         <div class="card-content">
