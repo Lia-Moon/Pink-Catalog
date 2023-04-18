@@ -16,9 +16,9 @@
     </header>
 
     <main> <!-- *********************************************** MAIN ***************************************************** -->
-        <div class="row">
+        <div id="formulario__cadastro" class="row">
 
-            <form action="inserirFilme.php" method="POST">
+            <form action="inserirFilme.php" method="POST" id="formulario">
                 <div class="col s6 offset-s3">
                     <div class="card">
                         <div class="card-content">
@@ -85,33 +85,9 @@
                     </div>
                 </div>
             </form>
-
-            <script>
-                const btn = document.getElementById('button-enviar');
-
-                btn.addEventListener('click', function handleClick(event) {
-                    // 👇️ if you are submitting a form (prevents page reload)
-                    event.preventDefault();
-
-                    const fileInput = document.getElementById('file-filme');
-                    const linkInput = document.getElementById('link-filme');
-
-                    // Send value to server
-                    console.log(fileInput.value);
-
-                    if (fileInput.value !== null && linkInput.value !== null) {
-                        // 👇️ clear input field
-                        fileInput.value = '';
-                        // 👇️ change id name to poster to work with php
-                        linkInput.id = 'poster';                        
-                    } else if (fileInput.value !== null && linkInput.value == null) {
-                        fileInput.id = 'poster';
-                    }
-                });
-            </script>
-
         </div>
     </main>
+    <script src="script.js"></script>
 </body>
 
 <?php include "footer.php" ?>
