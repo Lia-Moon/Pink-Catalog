@@ -67,6 +67,7 @@ $filmes = $bd->query($sql); //A função query retorna um conjunto de dados
     </main>
 </body>
 
+
 <?php include "footer.php" ?>
 
 </html>
