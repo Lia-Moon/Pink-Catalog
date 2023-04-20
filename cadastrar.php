@@ -18,7 +18,7 @@
     <main> <!-- *********************************************** MAIN ***************************************************** -->
         <div id="formulario__cadastro" class="row">
 
-            <form action="inserirFilme.php" method="POST" id="formulario" name="formulariocadastro">
+            <form action="inserirFilme.php" method="POST" id="formulario" name="formulariocadastro" enctype="multipart/form-data">
                 <div class="col s6 offset-s3">
                     <div class="card">
                         <div class="card-content">
@@ -55,10 +55,10 @@
                             <div class="file-field input-field">
                                 <div class="btn blue accent-1">
                                     <span>Capa</span>
-                                    <input type="file">
+                                    <input type="file" id=file-filme>
                                 </div>
                                 <div class="file-path-wrapper">
-                                    <input id="file-filme" class="file-path validate" type="text" name="file-filme">
+                                    <input class="file-path validate" type="text" name="file-filme">
                                 </div>
 
                                 <!-- <div class="file-path-wrapper">
