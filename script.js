@@ -27,6 +27,6 @@ btn.addEventListener('click', function handleClick(event) {
         linkInput.name = 'poster';
         form.submit();
     } else {
-        alert('Por favor, selecione um arquivo ou insira um link para o pôster do filme.');
+        alert('Por favor, insira todos os dados necessários para incluir um novo filme.');
     }
 });
