@@ -4,12 +4,12 @@
     <header> <!-- *********************************************** HEADER ***************************************************** -->
         <nav class="navegacao">
             <div class="navegacao__esquerda">
-                <a class="navegacao__esquerda--inicio" href="index.php">Início</a>
+                <a class="navegacao__esquerda--inicio" href="galeria.php">Início</a>
                 <a class="navegacao__esquerda--assistidos" href="#">Assistidos</a>
                 <a class="navegacao__esquerda--favoritos" href="#">Favoritos</a>
             </div>
             <div class="navegacao__direita">
-                <a class="navegacao__direita--index" href="index.php">Catálogo</a>
+                <a class="navegacao__direita--galeria" href="galeria.php">Catálogo</a>
                 <a class="navegacao__direita--cadastrar" href="cadastrar.php">Cadastrar</a>
             </div>
         </nav>
@@ -78,7 +78,7 @@
                             </div>
 
                             <div class="card-action">
-                                <a href="index.php" class="waves-effect waves-light btn grey">Cancelar</a>
+                                <a href="galeria.php" class="waves-effect waves-light btn grey">Cancelar</a>
                                 <button id="button-enviar" type="submit" class="waves-effect waves-light btn blue accent-1">Enviar</button>
                             </div>
                         </div>

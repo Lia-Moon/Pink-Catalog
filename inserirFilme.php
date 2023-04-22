@@ -44,6 +44,6 @@ if ($filmesRepository->salvar($filme)) {
     $_SESSION["msg"] =  "\nErro ao inserir filmes. " . $bs->lastErrorMsg();
 }
 
-header("Location: index.php");
+header("Location: galeria.php");
 
 ?>
