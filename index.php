@@ -1,10 +1,12 @@
 <?php include "cabecalho.php" ?> <!-- Essa linha adiciona o código do cabecalho.php nessa parte do código -->
 
 <?php
+session_start();
+require "./repository/FilmesRepositoryPDO.php";
+require "./util/Mensagem.php";
 
-$bd = new SQLite3("filmes.db");
-$sql = "SELECT * FROM filmes";
-$filmes = $bd->query($sql); //A função query retorna um conjunto de dados
+$filmesRepository = new FilmesRepositoryPDO();
+$filmes = $filmesRepository->listarTodos();
 
 /* $filme1 = [
     "titulo" => "Toy Story",
@@ -43,7 +45,7 @@ $filmes = $bd->query($sql); //A função query retorna um conjunto de dados
     <main> <!-- *********************************************** MAIN ***************************************************** -->
 
         <div class="row">
-            <?php while ($filme = $filmes->fetchArray()) : ?>
+            <?php foreach($filmes as $filme) : ?>
                 <!--   < ?php for ($i = 0; $i < count($filmes); $i++) {   forma de escrever
                             $filme = $filmes[$i]; 
                         ?>
@@ -52,21 +54,22 @@ $filmes = $bd->query($sql); //A função query retorna um conjunto de dados
                 <div class="col s12 m6 l3 sl2">
                     <div class="card hoverable">
                         <div class="card-image">
-                            <img src="<?php echo $filme["poster"] ?>"> <!-- Forma comum de escrever php-->
+                            <img src="<?php echo $filme->poster ?>"> <!-- Forma comum de escrever php-->
                             <a class="btn-floating halfway-fab waves-effect waves-light blue accent-1"><i class="material-icons">favorite_border</i></a>
                         </div>
                         <div class="card-content">
-                            <span class="card-title"><?php echo $filme["titulo"] ?></span> <!-- Outra forma de escrever quando é só 1 linha-->
-                            <p class="valign-wrapper"><i class="material-icons">date_range</i> <?= $filme["ano"] ?></p>
-                            <p><?= $filme["sinopse"] ?></p>
+                            <span class="card-title"><?php echo $filme->titulo ?></span> <!-- Outra forma de escrever quando é só 1 linha-->
+                            <p class="valign-wrapper"><i class="material-icons">date_range</i> <?= $filme->ano ?></p>
+                            <p><?= $filme->sinopse ?></p>
                         </div>
                     </div>
                 </div>
-            <?php endwhile ?>
+            <?php endforeach ?>
         </div>
     </main>
-</body>
 
+    <?= Mensagem::mostrar(); ?>
+</body>
 
 <?php include "footer.php" ?>
 
