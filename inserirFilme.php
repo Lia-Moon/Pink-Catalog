@@ -49,18 +49,19 @@ if (!empty($_POST['poster'])) {
 $bd = new SQLite3('filmes.db');
 
 // Define the SQL query to insert the values into the filmes table
-$sql = "INSERT INTO filmes (titulo, poster, sinopse, ano) VALUES (
-        '$titulo',
-        '$poster',
-        '$sinopse',
-        $ano
-    )";
+$sql = "INSERT INTO filmes (titulo, poster, sinopse, ano) 
+        VALUES (:titulo, :poster, :sinopse, :ano)";
+$stmt = $bd->prepare($sql);
+$stmt->bindValue(':titulo', $titulo, SQLITE3_TEXT); //stmt = statement, SQLITE3_TEXT é uma constante para campo de texto //serve para substituir os campos por strings
+$stmt->bindValue(':sinopse', $sinopse, SQLITE3_TEXT);
+$stmt->bindValue(':ano', $ano, SQLITE3_INTEGER);
+$stmt->bindValue(':poster', $poster, SQLITE3_TEXT);
 
 // Execute the SQL query
-if ($bd->exec($sql)) {
+if ($stmt->execute()) {
     echo "\nFilmes inseridos com sucesso\n";
 } else {
-    echo "\nErro ao inserir filmes. " . $bs->lastErrorMsg();
+    echo "\nErro ao inserir filmes. " . $bd->lastErrorMsg();
 }
 
 ?>
