@@ -1,5 +1,7 @@
 <?php
 
+require "conexao.php";
+
 class FilmesRepositoryPDO{
     public function listarTodos():array{
         $bd = Conexao::criar();
@@ -7,8 +9,8 @@ class FilmesRepositoryPDO{
 
         $sql = "SELECT * FROM filmes";
         $filmes = $bd->query($sql); //A função query retorna um conjunto de dados
-        while ($filme = $filmes->fetch(PDO::FETCH_ASSOC)){
-            array_push($filmesLista, $filmesLista);
+        while ($filme = $filmes->fetchArray()) {
+            array_push($filmesLista, $filme);
         }
         return $filmesLista;
     }

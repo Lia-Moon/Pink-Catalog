@@ -2,9 +2,10 @@
 
 <?php
 
-$bd = new SQLite3("filmes.db");
-$sql = "SELECT * FROM filmes";
-$filmes = $bd->query($sql); //A função query retorna um conjunto de dados
+require "./repository/FilmesRepositoryPDO.php";
+
+$filmesRepository = new FilmesRepositoryPDO();
+$filmes = $filmesRepository->listarTodos();
 
 /* $filme1 = [
     "titulo" => "Toy Story",
@@ -43,7 +44,7 @@ $filmes = $bd->query($sql); //A função query retorna um conjunto de dados
     <main> <!-- *********************************************** MAIN ***************************************************** -->
 
         <div class="row">
-            <?php while ($filme = $filmes->fetchArray()) : ?>
+            <?php foreach($filmes as $filme) : ?>
                 <!--   < ?php for ($i = 0; $i < count($filmes); $i++) {   forma de escrever
                             $filme = $filmes[$i]; 
                         ?>
@@ -62,7 +63,7 @@ $filmes = $bd->query($sql); //A função query retorna um conjunto de dados
                         </div>
                     </div>
                 </div>
-            <?php endwhile ?>
+            <?php endforeach ?>
         </div>
     </main>
 </body>
