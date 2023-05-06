@@ -67,4 +67,6 @@ if ($stmt->execute()) {
     echo "\nErro ao inserir filmes. " . $bd->lastErrorMsg();
 }
 
+header("Location: galeria.php?msg=Filme+cadastrado+com+sucesso");
+
 ?>
