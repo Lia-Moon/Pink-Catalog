@@ -24,17 +24,20 @@ else
 
 <?php
 
+// Open a connection to the SQLite database
+$bd = new SQLite3('filmes.db');
+
 // Get values from the form inputs
-$titulo = $_POST["titulo"];
-$sinopse = $_POST["sinopse"];
-$ano = $_POST["ano"];
+$titulo = $bd->escapeString($_POST["titulo"]);
+$sinopse = $bd->escapeString($_POST["sinopse"]);
+$ano = $bd->escapeString($_POST["ano"]);
 
 // Check if the poster input is filled, if yes, store the value in $poster variable
-if (!empty($_POST['poster'])) {
-    $poster = $_POST['poster'];
+if (!empty($_POST["poster"])) {
+    $poster = $bd->escapeString($_POST["poster"]);
 } else {
     // If the poster input is not filled, get the file from $_FILES array
-    $poster = $_FILES['poster'];
+    $poster = $_FILES["poster"];
     // Generate a unique filename for the uploaded file
     $poster_name = uniqid() . '.' . pathinfo($poster['name'], PATHINFO_EXTENSION);
     // Set the file path where the file will be saved
@@ -45,8 +48,8 @@ if (!empty($_POST['poster'])) {
     $poster = $poster_path;
 }
 
-// Open a connection to the SQLite database
-$bd = new SQLite3('filmes.db');
+$poster = $bd->escapeString($poster); // Add this line
+
 
 // Define the SQL query to insert the values into the filmes table
 $sql = "INSERT INTO filmes (titulo, poster, sinopse, ano) 
